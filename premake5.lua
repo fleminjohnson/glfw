@@ -9,13 +9,13 @@ files
 {
   "include/GLFW/glfw3.h",
   "include/GLFW/glfw3native.h",
-  "Src/glfw_config.h",
-  "Src/context.c",
-  "Src/init.c",
-  "Src/input.c",
-  "Src/monitor.c",
-  "Src/window.c",
-  "Src/vulkan.c"
+  "src/glfw_config.h",
+  "src/context.c",
+  "src/init.c",
+  "src/input.c",
+  "src/monitor.c",
+  "src/window.c",
+  "src/vulkan.c"
 }
 
 filter "system:windows"
@@ -25,15 +25,15 @@ staticruntime "On"
 
 files
 {
-  "Src/win32_init.c",
-  "Src/win32_joystick.c",
-  "Src/win32_monitor.c",
-  "Src/win32_time.c",
-  "Src/win32_thread.c",
-  "Src/win32_window.c",
-  "Src/wgl_context.c",
-  "Src/egl_context.c",
-  "Src/osmesa_context.c"
+  "src/win32_init.c",
+  "src/win32_joystick.c",
+  "src/win32_monitor.c",
+  "src/win32_time.c",
+  "src/win32_thread.c",
+  "src/win32_window.c",
+  "src/wgl_context.c",
+  "src/egl_context.c",
+  "src/osmesa_context.c"
 }
 
 defines
