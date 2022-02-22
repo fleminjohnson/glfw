@@ -307,7 +307,7 @@ void _glfwDetectJoystickConnectionLinux(void)
 //////                       GLFW platform API                      //////
 //////////////////////////////////////////////////////////////////////////
 
-GLFWbool _glfwInitJoysticksLinux(void)
+GLFWbool _glfwPlatformInitJoysticks(void)
 {
     const char* dirname = "/dev/input";
 
@@ -361,7 +361,7 @@ GLFWbool _glfwInitJoysticksLinux(void)
     return GLFW_TRUE;
 }
 
-void _glfwTerminateJoysticksLinux(void)
+void _glfwPlatformTerminateJoysticks(void)
 {
     int jid;
 
@@ -382,7 +382,7 @@ void _glfwTerminateJoysticksLinux(void)
     }
 }
 
-int _glfwPollJoystickLinux(_GLFWjoystick* js, int mode)
+int _glfwPlatformPollJoystick(_GLFWjoystick* js, int mode)
 {
     // Read all queued events (non-blocking)
     for (;;)
@@ -422,12 +422,7 @@ int _glfwPollJoystickLinux(_GLFWjoystick* js, int mode)
     return js->present;
 }
 
-const char* _glfwGetMappingNameLinux(void)
-{
-    return "Linux";
-}
-
-void _glfwUpdateGamepadGUIDLinux(char* guid)
+void _glfwPlatformUpdateGamepadGUID(char* guid)
 {
 }
 
